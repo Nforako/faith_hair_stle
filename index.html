@@ -111,11 +111,28 @@
   .book-btn:hover {
     transform: scale(1.05);
   }
+  .floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to right, #ffd700, #ffc107);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    z-index: 9999;
+  }
+  .floating-contact:hover {
+    transform: scale(1.1);
+  }
 </style>
 </head>
 <body>
-  <header>
-    <h1 style="color: #fff; text-shadow: 0 0 8px #ffd700, 0 0 16px #ffc107, 0 0 24px #ffeb3b;">faith_hair_style</h1>
+  $1
+    <p style="font-size: 1em; margin: 8px 0;"><a href="https://maps.google.com/?q=Riverdale+MD" style="color:white; text-decoration:none;">Riverdale, MD</a> | <a href="tel:3015419875" style="color:white; text-decoration:none;">Call/Text: 301-541-9875</a></p>
     <p>Hairstyles for Women and Men | Personalized Recommendations</p>
     <div class="taglines" id="tagline">Confidence starts with great hair. Experience premium styles tailored just for you.</div>
   </header>  <nav>
@@ -194,5 +211,7 @@
         el.style.textShadow = '0 0 5px #ffd700, 0 0 10px #ffc107, 0 0 20px #ffeb3b';
       }, 1000);
     }, 7000);
-  </script></body>
+  </script><a href="#contact" class="floating-contact">Contact Us</a>
+
+</body>
 </html>
