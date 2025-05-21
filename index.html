@@ -44,6 +44,7 @@
 
     section {
       padding: 40px 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     input, button {
@@ -84,6 +85,11 @@
 
     .socials a:hover {
       color: #ff69b4;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes colorCycle {
