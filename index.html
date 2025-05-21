@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Faith_Hair_Style</title>
+  <title>faith_hair_style</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       color: #333;
-      transition: background-color 1s, color 1s;
     }
 
     header {
-      text-align: center;
-      padding: 40px 20px;
-      background: #ff91a4;
       color: white;
+      padding: 40px 20px;
+      text-align: center;
     }
 
     header h1 {
-      font-size: 2.8em;
-      margin: 0;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
     nav {
@@ -29,89 +28,202 @@
     }
 
     nav a {
-      margin: 0 15px;
+      margin: 0 12px;
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .cover {
       width: 100%;
       height: 300px;
-      background: url('https://source.unsplash.com/1600x300/?hair,salon') center/cover no-repeat;
+      background: url('https://source.unsplash.com/1600x300/?hair,beauty,salon') center/cover no-repeat;
+      margin-bottom: 30px;
     }
 
-    .image-rotator {
-      text-align: center;
-      padding: 30px;
+    section {
+      padding: 50px 25px;
+      max-width: 960px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
     }
 
-    .image-rotator img {
-      width: 300px;
-      height: 300px;
-      border-radius: 15px;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    h2 {
+      font-size: 1.8em;
+      border-left: 5px solid;
+      padding-left: 12px;
+      margin-bottom: 20px;
     }
 
-    .booking {
-      text-align: center;
-      margin: 30px 0;
+    ul {
+      list-style: none;
+      padding: 0;
     }
 
-    .booking a {
-      background: #ff91a4;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 25px;
-      text-decoration: none;
+    li {
+      padding: 8px 0;
       font-size: 1.1em;
     }
 
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 220px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      margin-top: 15px;
+      color: white;
+    }
+
     footer {
+      color: white;
       text-align: center;
       padding: 20px;
-      background: #f5f5f5;
+      font-size: 0.95em;
     }
 
     .social-icons img {
-      width: 32px;
+      width: 30px;
       margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 640px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
+  <style id="dynamic-style"></style>
 </head>
 <body>
 
   <header>
-    <h1>Faith Hair Style</h1>
+    <h1>faith_hair_style</h1>
+    <p>Beauty. Confidence. You.</p>
     <nav>
+      <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
-      <a href="https://calendly.com/nforako24" target="_blank">Book Now</a>
+      <a href="#booking">Book</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <div class="cover"></div>
 
-  <section class="image-rotator" id="gallery">
-    <img id="hairStyleImg" src="https://source.unsplash.com/300x300/?braids" alt="Hairstyle">
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Twist (Butt Length)</strong> – $250</li>
+      <li><strong>Twist (Waist Length)</strong> – $200</li>
+      <li><strong>Knowles (Waist Length)</strong> – $180</li>
+      <li><strong>Knowles (Butt Length)</strong> – $240</li>
+      <li><strong>Cornrows</strong> – $40+</li>
+    </ul>
   </section>
 
-  <section class="booking">
-    <a href="https://calendly.com/nforako24" target="_blank">Schedule an Appointment</a>
-  </section>
-
-  <footer id="contact">
-    <p>Connect with us:</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/faith_styl" target="_blank"><img src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="Instagram"></a>
-      <a href="https://www.tiktok.com" target="_blank"><img src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" alt="TikTok"></a>
+  <section id="gallery">
+    <h2>Style Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/300x300/?braids" alt="Hairstyle">
     </div>
-    <p>&copy; 2025 Faith Hair Style. All rights reserved.</p>
+  </section>
+
+  <section id="booking">
+    <h2>Book an Appointment or Walk In</h2>
+    <p><strong>Appointments:</strong> Call or text <strong>(301) 541-9875</strong> to schedule in advance.</p>
+    <p>Or use our online scheduler:</p>
+    <a class="button" href="https://calendly.com/nforako24" target="_blank">Book on Calendly</a>
+    <p><strong>Walk-ins:</strong> Welcome based on availability. First come, first served.</p>
+    <p>Hours: Mon–Sat, 9am–11pm</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:nforako24@gmail.com">nforako24@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
+    <p>Location: Riverdale, MD</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 faith_hair_style. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/faith_styl" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/tiktok--v1.png" alt="TikTok">
+      </a>
+      <a href="https://calendly.com/nforako24" target="_blank" class="button" style="margin-left: 10px;">Book Now</a>
+    </div>
   </footer>
 
   <script>
-    const images = [
+    const themes = [
+      { header: "#ff91a4", accent: "#e91e63", bg: "#fff6f8", footer: "#f06292" },
+      { header: "#4a90e2", accent: "#007aff", bg: "#f0f8ff", footer: "#1e88e5" },
+      { header: "#7bc043", accent: "#388e3c", bg: "#f9fff3", footer: "#689f38" },
+      { header: "#fdd835", accent: "#f57f17", bg: "#fffde7", footer: "#fbc02d" },
+      { header: "#9c27b0", accent: "#ab47bc", bg: "#f3e5f5", footer: "#8e24aa" }
+    ];
+
+    const styleTag = document.getElementById("dynamic-style");
+    let themeIndex = new Date().getDay() % themes.length;
+
+    function applyTheme(theme) {
+      styleTag.innerHTML = `
+        body { background: ${theme.bg}; }
+        header { background: ${theme.header}; }
+        nav a { color: white; }
+        h2 { color: ${theme.accent}; border-left: 5px solid ${theme.header}; }
+        footer { background: ${theme.footer}; }
+        a.button { background: ${theme.accent}; }
+        a.button:hover { background: ${theme.header}; }
+      `;
+    }
+
+    applyTheme(themes[themeIndex]);
+
+    setInterval(() => {
+      themeIndex = (themeIndex + 1) % themes.length;
+      applyTheme(themes[themeIndex]);
+    }, 30000);
+
+    const galleryImages = [
       "https://source.unsplash.com/300x300/?braids",
       "https://source.unsplash.com/300x300/?twist",
       "https://source.unsplash.com/300x300/?cornrow",
@@ -119,19 +231,15 @@
       "https://source.unsplash.com/300x300/?salon"
     ];
 
-    const colors = ["#fff6f8", "#f0f8ff", "#ffe4e1", "#fefbd8", "#f0fff0"];
-    let imageIndex = 0;
-    let colorIndex = 0;
+    let imgIndex = 0;
+    const firstImg = document.querySelector(".gallery img");
 
     setInterval(() => {
-      imageIndex = (imageIndex + 1) % images.length;
-      document.getElementById("hairStyleImg").src = images[imageIndex];
-    }, 15000); // Rotate every 15 seconds
-
-    setInterval(() => {
-      colorIndex = (colorIndex + 1) % colors.length;
-      document.body.style.backgroundColor = colors[colorIndex];
-    }, 30000); // Change theme every 30 seconds
+      imgIndex = (imgIndex + 1) % galleryImages.length;
+      if (firstImg) {
+        firstImg.src = galleryImages[imgIndex];
+      }
+    }, 15000);
   </script>
 
 </body>
