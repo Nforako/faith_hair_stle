@@ -1,35 +1,41 @@
-from IPython.display import display, HTML
-import os
-
-# Create a basic layout with service list and images
-html_code = """
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>fairh_hair_style</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #fff0f4;
       color: #333;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      color: #ff3e7f;
+    header {
+      background-color: #ff6b9e;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
-    .services, .gallery, .contact, .booking {
-      margin-top: 30px;
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      padding: 20px;
     }
     .gallery img {
-      width: 150px;
+      width: 120px;
       margin-right: 10px;
-      border-radius: 10px;
+      border-radius: 8px;
     }
     .btn {
       display: inline-block;
+      padding: 10px 20px;
       background-color: #ff6b9e;
       color: white;
-      padding: 10px 15px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
@@ -39,45 +45,55 @@ html_code = """
 </head>
 <body>
 
-<h1>fairh_hair_style</h1>
-<p style="text-align:center;">Beauty. Confidence. You.</p>
+<header>
+  <h1>fairh_hair_style</h1>
+  <p>Beauty. Confidence. You.</p>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#book">Book Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<div class="services">
-  <h2>Our Services</h2>
-  <ul>
-    <li>Twist (Butt Length) – $250</li>
-    <li>Twist (Waist Length) – $200</li>
-    <li>Knowles (Waist Length) – $180</li>
-    <li>Knowles (Butt Length) – $240</li>
-    <li>Cornrows – $40+</li>
-    <li>Men Cornrows – $50+</li>
-  </ul>
-</div>
+<div class="content">
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Twist (Butt Length) – $250</li>
+      <li>Twist (Waist Length) – $200</li>
+      <li>Knowles (Waist Length) – $180</li>
+      <li>Knowles (Butt Length) – $240</li>
+      <li>Cornrows – $40+</li>
+      <li>Men Cornrows – $50+</li>
+    </ul>
+  </section>
 
-<div class="gallery">
-  <h2>Style Gallery</h2>
-  <img src="style1.jpg" alt="Style 1">
-  <img src="style2.jpg" alt="Style 2">
-  <img src="style3.jpg" alt="Style 3">
-  <img src="style4.jpg" alt="Style 4">
-</div>
+  <section id="gallery">
+    <h2>Style Gallery</h2>
+    <div class="gallery">
+      <img src="images/style1.jpg" alt="Style 1">
+      <img src="images/style2.jpg" alt="Style 2">
+      <img src="images/style3.jpg" alt="Style 3">
+    </div>
+  </section>
 
-<div class="booking">
-  <h2>Book an Appointment</h2>
-  <p>Call or text <strong>(301) 541-9875</strong> to schedule in advance, or use our online scheduler:</p>
-  <a href="https://calendly.com/nforako24/30min" target="_blank" class="btn">Book 30-Min Appointment</a>
-</div>
+  <section id="book">
+    <h2>Book an Appointment or Walk In</h2>
+    <p><strong>Appointments:</strong> Call or text <strong>(301) 541-9875</strong> to schedule in advance.</p>
+    <p>Or use our online scheduler: <a href="https://calendly.com/nforako24/30min" target="_blank">Book on Calendly</a></p>
+    <a href="https://calendly.com/nforako24/30min" target="_blank" class="btn">Book 30-Min Appointment</a>
+    <p><strong>Walk-ins:</strong> Walk-ins are welcome based on availability. First come, first served.</p>
+    <p><strong>Hours:</strong> Mon–Sat, 9am–6pm</p>
+  </section>
 
-<div class="contact">
-  <h2>Contact Us</h2>
-  <p>Email: nforako24@gmail.com</p>
-  <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
-  <p>TikTok: <a href="https://www.tiktok.com/@hurera.hair.styl" target="_blank">@Hurera hair styl</a></p>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: nforako24@gmail.com</p>
+    <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
+    <p>TikTok: <a href="https://www.tiktok.com/@hurera.hair.styl" target="_blank">@Hurera hair styl</a></p>
+  </section>
 </div>
 
 </body>
 </html>
-"""
-
-# Display the website layout
-display(HTML(html_code))
