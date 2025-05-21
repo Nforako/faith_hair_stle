@@ -1,205 +1,185 @@
-<!DOCTYPE html><html lang="en">
-<link rel="icon" type="image/png" href="favicon.png" />
-<meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>faith_hair_style</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faith Hair Style</title>
   <style>
-    body {$1  transition: background 2s ease-in-out;
-  background: linear-gradient(to bottom right, #FFD700, #FFF5CC);
-}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #333;
+      text-align: center;
+      animation: colorCycle 1500s infinite;
+      transition: all 1s ease;
+    }
+
     header {
-      background: #ff91a4;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 30px 20px;
       color: white;
-      padding: 40px 20px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      background: gold;
+      text-shadow: 1px 1px #000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    .taglines {$1  color: #fff;
-  text-shadow: 0 0 5px #ffd700, 0 0 10px #ffc107, 0 0 20px #ffeb3b;
-}
-    nav {
-      background: #e85a70;
-      padding: 12px;
-      text-align: center;
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
-    nav a {
-      display: inline-block;
-      color: white;
-      margin: 0 14px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.05em;
+
+    .tagline {
+      font-size: 1.2em;
+      color: #333;
     }
+
+    .location {
+      margin-top: 5px;
+      font-size: 1.1em;
+      color: #444;
+    }
+
     section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
+      padding: 40px 20px;
     }
-    .style-card {$1  background: linear-gradient(to bottom right, #FFF5CC, #FFD700);
-  transition: background 1.5s ease-in-out;
-    .style-card h3 {
-      margin-bottom: 8px;
-      color: #c2185b;
-    }
-    .style-card p {
-      margin: 4px 0;
+
+    input, button {
+      padding: 10px;
       font-size: 1em;
-      color: #555;
-    }
-    input, button, textarea {
-      padding: 12px;
-      margin: 10px;
-      font-size: 1em;
-      width: 85%;
+      margin: 10px 5px;
       border: 1px solid #ccc;
       border-radius: 6px;
     }
-    button {$1  background: linear-gradient(to right, #FFD700, #FFC107);
-  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-  transition: background 0.5s ease-in-out;
-    .response {
-      margin-top: 25px;
-      font-style: italic;
-      font-size: 1.1em;
+
+    .slideshow img {
+      width: 90%;
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: all 1s ease-in-out;
     }
-    img {
-      max-width: 100%;
-      border-radius: 15px;
-      margin-top: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 600px;
+      border: none;
+      margin-top: 30px;
     }
-    footer {
-      background: #ff91a4;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.95em;
+
+    .socials {
+      margin-top: 30px;
     }
-    blockquote {
-      background: #fdf0f5;
-      border-left: 10px solid #ff91a4;
-      margin: 1em auto;
-      padding: 1em;
-      max-width: 700px;
-      font-style: italic;
-      color: #444;
+
+    .socials a {
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.2em;
+      color: #000;
+      transition: color 0.3s;
     }
-    .price {
-    font-weight: bold;
-    font-size: 1.15em;
-    color: #c2185b;
-    background: #fff8e1;
-    padding: 3px 8px;
-    border-radius: 6px;
-    box-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
-  }
-  .book-btn {
-    margin-top: 10px;
-    padding: 10px 16px;
-    font-size: 1em;
-    background: linear-gradient(to right, #ffd700, #ffc107);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
-    transition: transform 0.2s ease-in-out;
-  }
-  .book-btn:hover {
-    transform: scale(1.05);
-  }
-</style>
+
+    .socials a:hover {
+      color: #ff69b4;
+    }
+
+    @keyframes colorCycle {
+      0% { background-color: #fffbe6; }
+      2% { background-color: #ffe6f0; }
+      4% { background-color: #f0fff4; }
+      6% { background-color: #e6f7ff; }
+      8% { background-color: #f9f9f9; }
+      10% { background-color: #f0e6ff; }
+      12% { background-color: #e0f7e6; }
+      14% { background-color: #ffe0e6; }
+      16% { background-color: #e6f0ff; }
+      18% { background-color: #fff0e6; }
+      20% { background-color: #f4e6ff; }
+      22% { background-color: #e6fff2; }
+      24% { background-color: #ffe6cc; }
+      26% { background-color: #d9f2ff; }
+      28% { background-color: #fff0f5; }
+      30% { background-color: #e6ffe6; }
+      32% { background-color: #fff9e6; }
+      34% { background-color: #e6d9ff; }
+      36% { background-color: #fce6ff; }
+      38% { background-color: #e6f9ff; }
+      40% { background-color: #ffe6fa; }
+      42% { background-color: #f6ffe6; }
+      44% { background-color: #ffe6f7; }
+      46% { background-color: #e6e6ff; }
+      48% { background-color: #e0fff0; }
+      50% { background-color: #f0f8ff; }
+      52% { background-color: #fff0d9; }
+      54% { background-color: #f6f6ff; }
+      56% { background-color: #e6fff9; }
+      58% { background-color: #f0e6f2; }
+      60% { background-color: #fffae6; }
+      62% { background-color: #e0f0ff; }
+      64% { background-color: #fff6e6; }
+      66% { background-color: #e6fff5; }
+      68% { background-color: #f5e6ff; }
+      70% { background-color: #f0fff6; }
+      72% { background-color: #f6f0ff; }
+      74% { background-color: #f8ffe6; }
+      76% { background-color: #e6f0fa; }
+      78% { background-color: #fff6f0; }
+      80% { background-color: #fff0f2; }
+      82% { background-color: #eefaff; }
+      84% { background-color: #faf0ff; }
+      86% { background-color: #fff9f9; }
+      88% { background-color: #f7f0e6; }
+      90% { background-color: #f6f0ff; }
+      92% { background-color: #efffe6; }
+      94% { background-color: #f4e6f0; }
+      96% { background-color: #f7ffe6; }
+      98% { background-color: #e6fff0; }
+      100% { background-color: #fffbe6; }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1 style="color: #fff; text-shadow: 0 0 8px #ffd700, 0 0 16px #ffc107, 0 0 24px #ffeb3b;">faith_hair_style</h1>
-    <p>Hairstyles for Women and Men | Personalized Recommendations</p>
-    <div class="taglines" id="tagline">Confidence starts with great hair. Experience premium styles tailored just for you.</div>
-  </header>  <nav>
-    <a href="#">Home</a>
-    <a href="#styles">Styles & Pricing</a>
-    <a href="#booking">Book Online</a>
-    <a href="#testimonials">Reviews</a>
-    <a href="https://www.instagram.com/faith_hair_style" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@faith_styl" target="_blank">TikTok</a>
-  </nav>  <section id="styles">
-    <h2>Styles & Pricing</h2>
-    <div class="style-card">
-  <h3>Twist</h3>
-  <p><strong>Waist Length:</strong> <span class="price">$200</span></p>
-  <p><strong>Butt Length:</strong> <span class="price">$250</span></p>
-  <a href="#booking"><button class="book-btn">Book Now</button></a>
-</div>
-    <div class="style-card">
-  <h3>Knowles</h3>
-  <p><strong>Waist Length:</strong> <span class="price">$180</span></p>
-  <p><strong>Butt Length:</strong> <span class="price">$240</span></p>
-  <a href="#booking"><button class="book-btn">Book Now</button></a>
-</div>
-    <div class="style-card">
-  <h3>Cornrows</h3>
-  <p><strong>Basic (40+):</strong> <span class="price">$40+</span></p>
-  <a href="#booking"><button class="book-btn">Book Now</button></a>
-</div>
-  </section>  <section>
-    <h2>Get a Style Idea</h2>
-    <input type="text" id="prompt" placeholder="Describe your hair or style goal...">
-    <button onclick="generateSuggestion()">Show Style</button>
-    <div class="response" id="response"></div>
-    <img id="hairstyleImage" src="https://source.unsplash.com/800x400/?hairstyle,braids" alt="Hairstyle" />
-  </section>  <section id="booking">
-    <h2>Book an Appointment</h2>
-    <p>Schedule your session with Fairh Hair Style below.</p>
-    <iframe src="https://calendly.com/nforako24/30min" width="100%" height="600" frameborder="0"></iframe>
-  </section>  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Call or Text: <strong>301-541-9875</strong></p>
-    <form action="mailto:nforako24@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>  <section id="testimonials">
-    <h2>What Our Clients Say</h2>
-    <blockquote>“Amazing service! My hair looks perfect every time.” – Sarah A.</blockquote>
-    <blockquote>“Very professional and friendly. Highly recommend!” – James T.</blockquote>
-  </section>  <footer>
-    &copy; 2025 faith_hair_style | All rights reserved | Contact: 301-541-9875
-  </footer>  <script>
-    const colors = ['#FFD700', '#FFF5CC', '#FFEFBA', '#FFE4B5', '#FAFAD2', '#FBE7A1', '#FFFACD', '#FFFAF0', '#FFF8DC', '#FFFDD0'];
-    let colorIndex = 0;
-    setInterval(() => {
-  document.body.style.background = `linear-gradient(to bottom right, ${colors[colorIndex % colors.length]}, white)`;
-  colorIndex++;
-}, 30000);
 
-    function generateSuggestion() {
-      const prompt = document.getElementById('prompt').value || 'braids';
-      document.getElementById('response').innerText = `Suggested: Try a layered bob with soft curls for ${prompt.toLowerCase()}`;
-      document.getElementById('hairstyleImage').src = `https://source.unsplash.com/800x400/?hairstyle,${encodeURIComponent(prompt)}`;
-    }
+<header>
+  <h1>Faith Hair Style</h1>
+  <div class="tagline">Elegant Styles for Every Look</div>
+  <div class="location">Riverdale, MD</div>
+</header>
 
-    const taglines = [
-      "Confidence starts with great hair. Experience premium styles tailored just for you.",
-      "Where beauty meets precision — hairstyles that speak your identity.",
-      "Elevate your look. Trust the artistry of Fairh Hair Style.",
-      "Your perfect style is just one booking away.",
-      "We don’t just style hair — we craft confidence."
-    ];
-    let taglineIndex = 0;
-    setInterval(() => {
-      const el = document.getElementById('tagline');
-      el.style.opacity = 0;
-      setTimeout(() => {
-        taglineIndex = (taglineIndex + 1) % taglines.length;
-        el.innerText = taglines[taglineIndex];
-        el.style.opacity = 1;
-        el.style.textShadow = '0 0 5px #ffd700, 0 0 10px #ffc107, 0 0 20px #ffeb3b';
-      }, 1000);
-    }, 7000);
-  </script></body>
+<section>
+  <h2>Get a Style Idea</h2>
+  <input type="text" placeholder="Describe your hair or style goal">
+  <button>Show Style</button>
+  <p>Suggested: Try a layered bob with soft curls for braids</p>
+  <div class="slideshow">
+    <img id="styleImage" src="images/style1.jpg" alt="Hairstyle">
+  </div>
+</section>
+
+<section>
+  <h2>Book an Appointment</h2>
+  <p>Schedule your session with Faith Hair Style below.</p>
+  <iframe src="https://calendly.com/nforako24/30min?embed_domain=nforako.github.io&embed_type=Inline"></iframe>
+</section>
+
+<section class="socials">
+  <h2>Follow Us</h2>
+  <a href="https://tiktok.com/@faith_styl" target="_blank">TikTok</a>
+  <a href="https://instagram.com/faith_styl" target="_blank">Instagram</a>
+</section>
+
+<script>
+  // Auto-rotate images every 15 seconds
+  const images = ["images/style1.jpg", "images/style2.jpg", "images/style3.jpg"];
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    document.getElementById("styleImage").src = images[index];
+  }, 15000);
+</script>
+
+</body>
 </html>
