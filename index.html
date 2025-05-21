@@ -1,138 +1,83 @@
+from IPython.display import display, HTML
+import os
+
+# Create a basic layout with service list and images
+html_code = """
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>fairh_hair_style</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #fff6f8;
+      font-family: Arial, sans-serif;
+      background-color: #fff0f4;
       color: #333;
+      padding: 20px;
     }
-
-    header {
-      background: #ff91a4;
-      color: white;
-      padding: 30px 15px;
+    h1 {
+      color: #ff3e7f;
       text-align: center;
     }
-
-    nav {
-      margin-top: 10px;
+    .services, .gallery, .contact, .booking {
+      margin-top: 30px;
     }
-
-    nav a {
-      margin: 0 15px;
+    .gallery img {
+      width: 150px;
+      margin-right: 10px;
+      border-radius: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #ff6b9e;
       color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 960px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #d94f66;
-      border-bottom: 2px solid #ff91a4;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      padding: 8px 0;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .gallery img {
-      width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    a {
-      color: #d94f66;
-    }
-
-    footer {
-      background: #ff91a4;
-      color: white;
-      text-align: center;
-      padding: 20px 15px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>fairh_hair_style</h1>
-    <p>Beauty. Confidence. You.</p>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#booking">Book Now</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li><strong>Twist (Butt Length)</strong> – $250</li>
-      <li><strong>Twist (Waist Length)</strong> – $200</li>
-      <li><strong>Knowles (Waist Length)</strong> – $180</li>
-      <li><strong>Knowles (Butt Length)</strong> – $240</li>
-      <li><strong>Cornrows</strong> – $40+</li>
-    </ul>
-  </section>
+<h1>fairh_hair_style</h1>
+<p style="text-align:center;">Beauty. Confidence. You.</p>
 
-  <section id="gallery">
-    <h2>Style Gallery</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/200" alt="Style 1" />
-      <img src="https://via.placeholder.com/200" alt="Style 2" />
-      <img src="https://via.placeholder.com/200" alt="Style 3" />
-    </div>
-  </section>
+<div class="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Twist (Butt Length) – $250</li>
+    <li>Twist (Waist Length) – $200</li>
+    <li>Knowles (Waist Length) – $180</li>
+    <li>Knowles (Butt Length) – $240</li>
+    <li>Cornrows – $40+</li>
+    <li>Men Cornrows – $50+</li>
+  </ul>
+</div>
 
-  <section id="booking">
-    <h2>Book an Appointment or Walk In</h2>
-    <p><strong>Appointments:</strong> Call or text <strong>(301) 541-9875</strong> to schedule in advance.</p>
-    <p>Or use our online scheduler: <a href="https://calendly.com/" target="_blank">Book on Calendly</a></p>
-    <p><strong>Walk-ins:</strong> Welcome based on availability. First come, first served.</p>
-    <p>Hours: Mon–Sat, 9am–11pm</p>
-  </section>
+<div class="gallery">
+  <h2>Style Gallery</h2>
+  <img src="style1.jpg" alt="Style 1">
+  <img src="style2.jpg" alt="Style 2">
+  <img src="style3.jpg" alt="Style 3">
+  <img src="style4.jpg" alt="Style 4">
+</div>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:nforako24@gmail.com">nforako24@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
-    <p>Location: Riverdale, MD</p>
-  </section>
+<div class="booking">
+  <h2>Book an Appointment</h2>
+  <p>Call or text <strong>(301) 541-9875</strong> to schedule in advance, or use our online scheduler:</p>
+  <a href="https://calendly.com/nforako24/30min" target="_blank" class="btn">Book 30-Min Appointment</a>
+</div>
 
-  <footer>
-    <p>&copy; 2025 fairh_hair_style. All Rights Reserved.</p>
-  </footer>
+<div class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: nforako24@gmail.com</p>
+  <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
+  <p>TikTok: <a href="https://www.tiktok.com/@hurera.hair.styl" target="_blank">@Hurera hair styl</a></p>
+</div>
+
 </body>
 </html>
+"""
+
+# Display the website layout
+display(HTML(html_code))
