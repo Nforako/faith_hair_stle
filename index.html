@@ -1,236 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>fairh_hair_style</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      color: #333;
-    }
-
-    header {
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 50px 25px;
-      max-width: 960px;
-      margin: auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: 1.8em;
-      border-left: 5px solid;
-      padding-left: 12px;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      padding: 8px 0;
-      font-size: 1.1em;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .gallery img {
-      width: 220px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-      margin-top: 15px;
-      color: white;
-    }
-
-    footer {
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.95em;
-    }
-
-    @media (max-width: 640px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      .gallery {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-
-  <!-- Dynamic Theme Switcher -->
-  <style id="dynamic-style"></style>
-  <script>
-    const themes = [
-      {
-        header: "#ff91a4",
-        accent: "#e91e63",
-        bg: "#fff6f8",
-        footer: "#f06292"
-      },
-      {
-        header: "#4a90e2",
-        accent: "#007aff",
-        bg: "#f0f8ff",
-        footer: "#1e88e5"
-      },
-      {
-        header: "#7bc043",
-        accent: "#388e3c",
-        bg: "#f9fff3",
-        footer: "#689f38"
-      },
-      {
-        header: "#fdd835",
-        accent: "#f57f17",
-        bg: "#fffde7",
-        footer: "#fbc02d"
-      },
-      {
-        header: "#9c27b0",
-        accent: "#ab47bc",
-        bg: "#f3e5f5",
-        footer: "#8e24aa"
-      }
-    ];
-
-    const theme = themes[new Date().getDay() % themes.length];
-    const styleTag = document.getElementById("dynamic-style");
-
-    styleTag.innerHTML = `
-      body {
-        background: ${theme.bg};
-      }
-      header {
-        background: ${theme.header};
-      }
-      nav a {
-        color: white;
-      }
-      h2 {
-        color: ${theme.accent};
-        border-left: 5px solid ${theme.header};
-      }
-      footer {
-        background: ${theme.footer};
-      }
-      a.button {
-        background: ${theme.accent};
-      }
-      a.button:hover {
-        background: ${theme.header};
-      }
-    `;
-  </script>
+    <meta charset="UTF-8">
+    <title>fairh_hair_style</title>
+    <style id="theme-style">
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #fff6f8;
+            color: #333;
+        }
+        header {
+            background: #ff91a4;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        p, h2 {
+            text-align: center;
+        }
+        h2 {
+            font-size: 28px;
+            color: #ff5c7a;
+        }
+        iframe, canvas {
+            display: block;
+            margin: 20px auto;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
-  <header>
+
+<header>
     <h1>fairh_hair_style</h1>
-    <p>Beauty. Confidence. You.</p>
     <nav>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#booking">Book</a>
-      <a href="#contact">Contact</a>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Booking</a>
+        <a href="#">Contact</a>
     </nav>
-  </header>
+</header>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li><strong>Twist (Butt Length)</strong> – $250</li>
-      <li><strong>Twist (Waist Length)</strong> – $200</li>
-      <li><strong>Knowles (Waist Length)</strong> – $180</li>
-      <li><strong>Knowles (Butt Length)</strong> – $240</li>
-      <li><strong>Cornrows</strong> – $40+</li>
-    </ul>
-  </section>
+<!-- Featured Hairstyle -->
+<section id="hairstyle-showcase">
+    <h2>Featured Hairstyle</h2>
+    <img id="hairstyle-img" src="" alt="Hairstyle">
+    <p id="hairstyle-desc"></p>
+</section>
 
-  <section id="gallery">
-    <h2>Style Gallery</h2>
-    <div class="gallery">
-      <img src="https://cdn.openai.com/chatgpt/images/hairstyle_twist_butt.jpg" alt="Twist Butt Length">
-      <img src="https://cdn.openai.com/chatgpt/images/hairstyle_twist_red.jpg" alt="Twist Waist Length Red">
-      <img src="https://cdn.openai.com/chatgpt/images/hairstyle_cornrow.jpg" alt="Cornrows">
-    </div>
-  </section>
+<!-- TikTok -->
+<section>
+    <h2>Watch on TikTok</h2>
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hairtutorials/video/7292293512392127750" data-video-id="7292293512392127750" style="max-width: 400px; margin:auto;">
+        <section>Loading TikTok...</section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+</section>
 
-  <section id="booking">
-    <h2>Book an Appointment or Walk In</h2>
-    <p><strong>Appointments:</strong> Call or text <strong>(301) 541-9875</strong> to schedule in advance.</p>
-    <p>Or use our online scheduler:</p>
-    <a class="button" href="https://calendly.com/fairh_hair_style" target="_blank">Book on Calendly</a>
-    <p><strong>Walk-ins:</strong> Welcome based on availability. First come, first served.</p>
-    <p>Hours: Mon–Sat, 9am–11pm</p>
-  </section>
+<!-- Price Chart -->
+<section>
+    <h2>Hairstyle Pricing Chart</h2>
+    <canvas id="priceChart"></canvas>
+</section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:nforako24@gmail.com">nforako24@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
-    <p>Location: Riverdale, MD</p>
-  </section>
+<!-- Appointment Booking -->
+<section>
+    <h2>Book Your Appointment</h2>
+    <iframe src="https://calendly.com/nforako24/30min" width="100%" height="600" frameborder="0"></iframe>
+</section>
 
-  <footer>
-    <p>&copy; 2025 fairh_hair_style. All Rights Reserved.</p>
-  </footer>
+<!-- Instagram Profile -->
+<section>
+    <h2>Follow Us on Instagram</h2>
+    <iframe src="https://www.instagram.com/fairh_hair_style/embed/" height="600" width="100%" frameborder="0"></iframe>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const hairstyles = [
+        { img: "twist_butt_color.jpg", desc: "Twist Butt Length – $250", label: "Twist Butt", price: 250 },
+        { img: "cornrow_color.jpg", desc: "Cornrow – $40+", label: "Cornrow", price: 40 },
+        { img: "knowles_waist_color.jpg", desc: "Knowles Waist Length – $180", label: "Knowles Waist", price: 180 },
+        { img: "knowles_butt_color.jpg", desc: "Knowles Butt Length – $240", label: "Knowles Butt", price: 240 },
+        { img: "twist_waist_color.jpg", desc: "Twist Waist Length – $200", label: "Twist Waist", price: 200 }
+    ];
+
+    // Rotate Hairstyle Every 15 Seconds
+    let current = 0;
+    function rotateHairstyle() {
+        const style = hairstyles[current % hairstyles.length];
+        document.getElementById("hairstyle-img").src = style.img;
+        document.getElementById("hairstyle-desc").textContent = style.desc;
+        current++;
+    }
+    rotateHairstyle();
+    setInterval(rotateHairstyle, 15000); // 15 seconds
+
+    // Theme Colors: [bg, header]
+    const themes = [
+        ['#fff6f8', '#ff91a4'],
+        ['#f0fff0', '#32cd32'],
+        ['#f0f8ff', '#4682b4'],
+        ['#fefbd8', '#ffa500'],
+        ['#fdf0f7', '#c71585']
+    ];
+    let themeIndex = 0;
+    function rotateTheme() {
+        const [bg, header] = themes[themeIndex % themes.length];
+        document.body.style.backgroundColor = bg;
+        document.querySelector("header").style.background = header;
+        themeIndex++;
+    }
+    rotateTheme();
+    setInterval(rotateTheme, 30000); // 30 seconds
+
+    // Chart.js Price Histogram
+    const ctx = document.getElementById('priceChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: hairstyles.map(h => h.label),
+            datasets: [{
+                label: 'Price in USD',
+                data: hairstyles.map(h => h.price),
+                backgroundColor: '#ff91a4'
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                title: { display: true, text: 'Hairstyle Prices', color: '#333' }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: '#333' }
+                },
+                x: {
+                    ticks: { color: '#333' }
+                }
+            }
+        }
+    });
+</script>
+
 </body>
 </html>
