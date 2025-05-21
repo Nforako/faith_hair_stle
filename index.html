@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>fairh_hair_style</title>
-    <style id="theme-style">
+    <style>
         body {
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
             background: #fff6f8;
             color: #333;
+            text-align: center;
         }
         header {
             background: #ff91a4;
             color: white;
             padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            margin-top: 10px;
         }
         nav a {
             margin: 0 15px;
@@ -25,151 +22,65 @@
             text-decoration: none;
             font-weight: bold;
         }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
+        .gallery {
+            margin-top: 30px;
         }
-        img {
-            display: block;
-            margin: 0 auto;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 20px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: opacity 1s ease-in-out;
         }
-        p, h2 {
-            text-align: center;
+        .caption {
+            font-size: 18px;
+            margin-top: 10px;
         }
-        h2 {
-            font-size: 28px;
-            color: #ff5c7a;
+        .socials {
+            margin-top: 40px;
         }
-        iframe, canvas {
-            display: block;
-            margin: 20px auto;
-            max-width: 600px;
-            width: 100%;
-            border-radius: 15px;
+        .socials a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ff4081;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Fairh Hair Style</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">Book</a>
+        </nav>
+    </header>
 
-<header>
-    <h1>fairh_hair_style</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Gallery</a>
-        <a href="#">Booking</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+    <div class="gallery">
+        <img id="hairImage" src="image/file_000000003dc623.jpg" alt="Hairstyle">
+        <div class="caption" id="caption">Twist Butt Length</div>
+    </div>
 
-<!-- Featured Hairstyle -->
-<section id="hairstyle-showcase">
-    <h2>Featured Hairstyle</h2>
-    <img id="hairstyle-img" src="" alt="Hairstyle">
-    <p id="hairstyle-desc"></p>
-</section>
+    <div class="socials">
+        <a href="https://instagram.com/faith_styl" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@faith_styl" target="_blank">TikTok</a>
+    </div>
 
-<!-- TikTok -->
-<section>
-    <h2>Watch on TikTok</h2>
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hairtutorials/video/7292293512392127750" data-video-id="7292293512392127750" style="max-width: 400px; margin:auto;">
-        <section>Loading TikTok...</section>
-    </blockquote>
-    <script async src="https://www.tiktok.com/embed.js"></script>
-</section>
+    <script>
+        const images = [
+            { src: 'image/file_000000003dc623.jpg', caption: 'Twist Butt Length' },
+            { src: 'image/file_00000002538623.jpg', caption: 'Knowles Waist Length' },
+            { src: 'image/file_00000004a88623.jpg', caption: 'Knowles Butt Length' },
+            { src: 'image/file_000000087c623.jpg', caption: 'Twist Waist Length' },
+            { src: 'image/file_0000000af1c623.jpg', caption: 'Cornroll 40+' }
+        ];
 
-<!-- Price Chart -->
-<section>
-    <h2>Hairstyle Pricing Chart</h2>
-    <canvas id="priceChart"></canvas>
-</section>
-
-<!-- Appointment Booking -->
-<section>
-    <h2>Book Your Appointment</h2>
-    <iframe src="https://calendly.com/nforako24/30min" width="100%" height="600" frameborder="0"></iframe>
-</section>
-
-<!-- Instagram Profile -->
-<section>
-    <h2>Follow Us on Instagram</h2>
-    <iframe src="https://www.instagram.com/fairh_hair_style/embed/" height="600" width="100%" frameborder="0"></iframe>
-</section>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const hairstyles = [
-        { img: "twist_butt_color.jpg", desc: "Twist Butt Length – $250", label: "Twist Butt", price: 250 },
-        { img: "cornrow_color.jpg", desc: "Cornrow – $40+", label: "Cornrow", price: 40 },
-        { img: "knowles_waist_color.jpg", desc: "Knowles Waist Length – $180", label: "Knowles Waist", price: 180 },
-        { img: "knowles_butt_color.jpg", desc: "Knowles Butt Length – $240", label: "Knowles Butt", price: 240 },
-        { img: "twist_waist_color.jpg", desc: "Twist Waist Length – $200", label: "Twist Waist", price: 200 }
-    ];
-
-    // Rotate Hairstyle Every 15 Seconds
-    let current = 0;
-    function rotateHairstyle() {
-        const style = hairstyles[current % hairstyles.length];
-        document.getElementById("hairstyle-img").src = style.img;
-        document.getElementById("hairstyle-desc").textContent = style.desc;
-        current++;
-    }
-    rotateHairstyle();
-    setInterval(rotateHairstyle, 15000); // 15 seconds
-
-    // Theme Colors: [bg, header]
-    const themes = [
-        ['#fff6f8', '#ff91a4'],
-        ['#f0fff0', '#32cd32'],
-        ['#f0f8ff', '#4682b4'],
-        ['#fefbd8', '#ffa500'],
-        ['#fdf0f7', '#c71585']
-    ];
-    let themeIndex = 0;
-    function rotateTheme() {
-        const [bg, header] = themes[themeIndex % themes.length];
-        document.body.style.backgroundColor = bg;
-        document.querySelector("header").style.background = header;
-        themeIndex++;
-    }
-    rotateTheme();
-    setInterval(rotateTheme, 30000); // 30 seconds
-
-    // Chart.js Price Histogram
-    const ctx = document.getElementById('priceChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: hairstyles.map(h => h.label),
-            datasets: [{
-                label: 'Price in USD',
-                data: hairstyles.map(h => h.price),
-                backgroundColor: '#ff91a4'
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: { display: false },
-                title: { display: true, text: 'Hairstyle Prices', color: '#333' }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: { color: '#333' }
-                },
-                x: {
-                    ticks: { color: '#333' }
-                }
-            }
-        }
-    });
-</script>
-
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            document.getElementById('hairImage').src = images[index].src;
+            document.getElementById('caption').textContent = images[index].caption;
+        }, 15000);
+    </script>
 </body>
 </html>
