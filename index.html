@@ -1,206 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>faith_hair_style</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fairh Hair Style</title>
   <style>
-    * { box-sizing: border-box; }
     body {
-      margin: 0; padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #fff;
+      margin: 0;
+      background-color: #fff6f8;
       color: #333;
+      transition: background-color 1s;
     }
     header {
-      text-align: center;
+      background: #ff91a4;
+      color: white;
       padding: 40px 20px;
-      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 { font-size: 2.5em; text-transform: uppercase; margin: 0; }
-    header p { font-size: 1.1em; margin: 10px 0; }
-    nav { margin-top: 10px; }
+    .taglines {
+      font-size: 1.5em;
+      margin-top: 10px;
+      min-height: 40px;
+      transition: opacity 1s ease-in-out;
+    }
+    nav {
+      background: #e85a70;
+      padding: 10px;
+      text-align: center;
+    }
     nav a {
-      margin: 0 12px;
       color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1em;
-    }
-    .cover {
-      width: 100%;
-      height: 300px;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                  url('https://source.unsplash.com/1600x300/?hair,beauty,salon') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 0 20px;
-    }
-    .cover h2 {
-      font-size: 2em;
-      margin: 0;
-    }
-    .cover p {
-      font-size: 1.2em;
-      margin-top: 10px;
     }
     section {
-      padding: 40px 25px;
-      max-width: 1000px;
-      margin: 0 auto 40px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
     }
-    h2 {
-      font-size: 1.8em;
-      border-left: 5px solid;
-      padding-left: 12px;
-      margin-bottom: 20px;
+    input, button, textarea {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1em;
+      width: 80%;
     }
-    ul { list-style: none; padding: 0; }
-    li { padding: 8px 0; font-size: 1.1em; }
-    .gallery {
-      display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
-    }
-    .gallery img {
-      width: 220px; border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover { transform: scale(1.05); }
-    a.button {
-      display: inline-block;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 15px;
+    button {
+      cursor: pointer;
+      background: #e85a70;
       color: white;
+      border: none;
+    }
+    .response {
+      margin-top: 20px;
+      font-style: italic;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-top: 20px;
     }
     footer {
+      background: #ff91a4;
       color: white;
       text-align: center;
-      padding: 25px 20px;
+      padding: 15px;
     }
-    .social-icons img {
-      width: 30px; margin: 0 10px; vertical-align: middle;
-    }
-    @media (max-width: 640px) {
-      nav a { display: block; margin: 10px 0; }
-      .gallery { flex-direction: column; align-items: center; }
+    blockquote {
+      background: #f9f9f9;
+      border-left: 10px solid #ff91a4;
+      margin: 1em auto;
+      padding: 1em;
+      max-width: 700px;
+      font-style: italic;
     }
   </style>
-  <style id="dynamic-style"></style>
 </head>
 <body>
   <header>
-    <h1>faith_hair_style</h1>
-    <p>Beauty. Confidence. You.</p>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#booking">Book</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <div class="cover">
-    <div>
-      <h2>Enhancing Beauty, Empowering Confidence</h2>
-      <p>Professional hairstyling for the modern woman. Where style meets care.</p>
-    </div>
-  </div>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li><strong>Twist (Butt Length)</strong> – $250</li>
-      <li><strong>Twist (Waist Length)</strong> – $200</li>
-      <li><strong>Knowles (Waist Length)</strong> – $180</li>
-      <li><strong>Knowles (Butt Length)</strong> – $240</li>
-      <li><strong>Cornrows</strong> – $40+</li>
-    </ul>
-  </section>
-
-  <section id="gallery">
-    <h2>Style Gallery</h2>
-    <div class="gallery">
-      <img src="https://source.unsplash.com/300x300/?braids" alt="Hairstyle">
-    </div>
-  </section>
-
-  <section id="booking">
+    <h1>Fairh Hair Style</h1>
+    <p>Hairstyles for Women and Men | AI-Powered Suggestions</p>
+    <div class="taglines" id="tagline">Confidence starts with great hair. Experience premium styles tailored just for you.</div>
+  </header>  <nav>
+    <a href="#">Home</a>
+    <a href="#booking">Book Online</a>
+    <a href="#contact">Contact</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="https://www.instagram.com/faith_styl" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@hurera_hair_styl" target="_blank">TikTok</a>
+  </nav>  <section>
+    <h2>Get a Style Suggestion</h2>
+    <input type="text" id="prompt" placeholder="Describe your hair or style goal...">
+    <button onclick="generateSuggestion()">Suggest Style</button>
+    <div class="response" id="response"></div>
+    <img id="hairstyleImage" src="https://source.unsplash.com/800x400/?hairstyle" alt="Hairstyle" />
+  </section>  <section id="booking">
     <h2>Book an Appointment</h2>
-    <p><strong>Call/text:</strong> (301) 541-9875</p>
-    <p>Or book online:</p>
-    <a class="button" href="https://calendly.com/nforako24" target="_blank">Book on Calendly</a>
-    <p><strong>Walk-ins:</strong> Welcome. Mon–Sat, 9am–11pm</p>
-  </section>
-
-  <section id="contact">
+    <p>Schedule your session with Fairh Hair Style below.</p>
+    <iframe src="https://calendly.com/nforako24/30min" width="100%" height="600" frameborder="0"></iframe>
+  </section>  <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:nforako24@gmail.com">nforako24@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
-    <p>Location: Riverdale, MD</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 faith_hair_style. All Rights Reserved.</p>
-    <div class="social-icons">
-      <a href="https://instagram.com/faith_styl" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram">
-      </a>
-      <a href="https://www.tiktok.com/@hurera_hair_styl" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/30/ffffff/tiktok--v1.png" alt="TikTok">
-      </a>
-      <a href="https://calendly.com/nforako24" target="_blank" class="button" style="margin-left: 10px;">Book Now</a>
-    </div>
-  </footer>
-
-  <script>
-    const themes = [
-      { header: "#ff91a4", accent: "#e91e63", bg: "#fff6f8", footer: "#f06292" },
-      { header: "#4a90e2", accent: "#007aff", bg: "#f0f8ff", footer: "#1e88e5" },
-      { header: "#7bc043", accent: "#388e3c", bg: "#f9fff3", footer: "#689f38" },
-      { header: "#fdd835", accent: "#f57f17", bg: "#fffde7", footer: "#fbc02d" },
-      { header: "#9c27b0", accent: "#ab47bc", bg: "#f3e5f5", footer: "#8e24aa" }
-    ];
-    const styleTag = document.getElementById("dynamic-style");
-    let themeIndex = new Date().getDay() % themes.length;
-    function applyTheme(theme) {
-      styleTag.innerHTML = `
-        body { background: ${theme.bg}; }
-        header { background: ${theme.header}; }
-        nav a { color: white; }
-        h2 { color: ${theme.accent}; border-left: 5px solid ${theme.header}; }
-        footer { background: ${theme.footer}; }
-        a.button { background: ${theme.accent}; }
-        a.button:hover { background: ${theme.header}; }
-      `;
-    }
-    applyTheme(themes[themeIndex]);
+    <form action="mailto:fairhstyle@example.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <blockquote>“Amazing service! My hair looks perfect every time.” – Sarah A.</blockquote>
+    <blockquote>“Very professional and friendly. Highly recommend!” – James T.</blockquote>
+  </section>  <footer>
+    &copy; 2025 Fairh Hair Style | Designed with AI
+  </footer>  <script>
+    const colors = ['#fff6f8', '#f0f8ff', '#fdf5e6', '#f5fffa'];
+    let colorIndex = 0;
     setInterval(() => {
-      themeIndex = (themeIndex + 1) % themes.length;
-      applyTheme(themes[themeIndex]);
+      document.body.style.backgroundColor = colors[colorIndex % colors.length];
+      colorIndex++;
     }, 30000);
 
-    const galleryImages = [
-      "https://source.unsplash.com/300x300/?braids",
-      "https://source.unsplash.com/300x300/?twist",
-      "https://source.unsplash.com/300x300/?cornrow",
-      "https://source.unsplash.com/300x300/?hairstyle",
-      "https://source.unsplash.com/300x300/?salon"
+    function generateSuggestion() {
+      const prompt = document.getElementById('prompt').value;
+      document.getElementById('response').innerText = `Suggested: Try a layered bob with soft curls for ${prompt.toLowerCase()}`;
+      document.getElementById('hairstyleImage').src = `https://source.unsplash.com/800x400/?hairstyle,${encodeURIComponent(prompt)}`;
+    }
+
+    const taglines = [
+      "Confidence starts with great hair. Experience premium styles tailored just for you.",
+      "Where beauty meets precision — hairstyles that speak your identity.",
+      "Elevate your look. Trust the artistry of Fairh Hair Style.",
+      "Your perfect style is just one booking away.",
+      "We don’t just style hair — we craft confidence."
     ];
-    let imgIndex = 0;
-    const firstImg = document.querySelector(".gallery img");
+    let taglineIndex = 0;
     setInterval(() => {
-      imgIndex = (imgIndex + 1) % galleryImages.length;
-      if (firstImg) firstImg.src = galleryImages[imgIndex];
-    }, 15000);
-  </script>
-</body>
+      const el = document.getElementById('tagline');
+      el.style.opacity = 0;
+      setTimeout(() => {
+        taglineIndex = (taglineIndex + 1) % taglines.length;
+        el.innerText = taglines[taglineIndex];
+        el.style.opacity = 1;
+      }, 1000);
+    }, 7000);
+  </script></body>
 </html>
