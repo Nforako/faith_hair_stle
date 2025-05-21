@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>fairh_hair_style</title>
+  <title>Faith_Hair_Style</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -39,6 +39,30 @@
       text-decoration: underline;
     }
 
+    .cover {
+      position: relative;
+      height: 400px;
+      background-image: url('image/cover_hairstyle.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cover-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .cover-overlay h2 {
+      font-size: 2.5em;
+      margin: 0 0 10px;
+    }
+
     section {
       padding: 50px 25px;
       max-width: 960px;
@@ -67,21 +91,13 @@
     }
 
     .gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      text-align: center;
     }
 
     .gallery img {
       width: 300px;
-      height: auto;
       border-radius: 12px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
     }
 
     .caption {
@@ -113,10 +129,14 @@
         display: block;
         margin: 10px 0;
       }
+
+      .cover-overlay h2 {
+        font-size: 1.5em;
+      }
     }
   </style>
 
-  <!-- Dynamic Theme Switcher -->
+  <!-- Dynamic Theme Color Rotation -->
   <style id="dynamic-style"></style>
   <script>
     const themes = [
@@ -126,22 +146,31 @@
       { header: "#fdd835", accent: "#f57f17", bg: "#fffde7", footer: "#fbc02d" },
       { header: "#9c27b0", accent: "#ab47bc", bg: "#f3e5f5", footer: "#8e24aa" }
     ];
-    const theme = themes[new Date().getDay() % themes.length];
     const styleTag = document.getElementById("dynamic-style");
-    styleTag.innerHTML = `
-      body { background: ${theme.bg}; }
-      header { background: ${theme.header}; }
-      nav a { color: white; }
-      h2 { color: ${theme.accent}; border-left: 5px solid ${theme.header}; }
-      footer { background: ${theme.footer}; }
-      a.button { background: ${theme.accent}; }
-      a.button:hover { background: ${theme.header}; }
-    `;
+    let themeIndex = 0;
+
+    function applyTheme(theme) {
+      styleTag.innerHTML = `
+        body { background: ${theme.bg}; }
+        header { background: ${theme.header}; }
+        nav a { color: white; }
+        h2 { color: ${theme.accent}; border-left: 5px solid ${theme.header}; }
+        footer { background: ${theme.footer}; }
+        a.button { background: ${theme.accent}; }
+        a.button:hover { background: ${theme.header}; }
+      `;
+    }
+
+    applyTheme(themes[themeIndex]);
+    setInterval(() => {
+      themeIndex = (themeIndex + 1) % themes.length;
+      applyTheme(themes[themeIndex]);
+    }, 30000); // Every 30 seconds
   </script>
 </head>
 <body>
   <header>
-    <h1>fairh_hair_style</h1>
+    <h1>Faith_Hair_Style</h1>
     <p>Beauty. Confidence. You.</p>
     <nav>
       <a href="#services">Services</a>
@@ -150,6 +179,13 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
+
+  <section class="cover">
+    <div class="cover-overlay">
+      <h2>Welcome to Faith Hair Style</h2>
+      <p>Express your beauty with confidence</p>
+    </div>
+  </section>
 
   <section id="services">
     <h2>Our Services</h2>
@@ -188,7 +224,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 fairh_hair_style. All Rights Reserved.</p>
+    <p>&copy; 2025 Faith_Hair_Style. All Rights Reserved.</p>
   </footer>
 
   <script>
