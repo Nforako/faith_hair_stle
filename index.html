@@ -1,98 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>fairh_hair_style</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            background: #fff6f8;
-            color: #333;
-        }
-        header {
-            background: #ff91a4;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        .gallery img {
-            width: 200px;
-            margin: 10px;
-            border-radius: 10px;
-        }
-        footer {
-            background: #ff91a4;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>fairh_hair_style</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff6f8;
+      color: #333;
+    }
+
+    header {
+      background: #ff91a4;
+      color: white;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d94f66;
+      border-bottom: 2px solid #ff91a4;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    a {
+      color: #d94f66;
+    }
+
+    footer {
+      background: #ff91a4;
+      color: white;
+      text-align: center;
+      padding: 20px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>fairh_hair_style</h1>
-        <p>Beauty. Confidence. You.</p>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#booking">Book Now</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <h1>fairh_hair_style</h1>
+    <p>Beauty. Confidence. You.</p>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#booking">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li><strong>Twist (Butt Length)</strong> – $250</li>
-            <li><strong>Twist (Waist Length)</strong> – $200</li>
-            <li><strong>Knowles (Waist Length)</strong> – $180</li>
-            <li><strong>Knowles (Butt Length)</strong> – $240</li>
-            <li><strong>Cornrows</strong> – $40+</li>
-        </ul>
-    </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Twist (Butt Length)</strong> – $250</li>
+      <li><strong>Twist (Waist Length)</strong> – $200</li>
+      <li><strong>Knowles (Waist Length)</strong> – $180</li>
+      <li><strong>Knowles (Butt Length)</strong> – $240</li>
+      <li><strong>Cornrows</strong> – $40+</li>
+    </ul>
+  </section>
 
-    <section id="gallery">
-        <h2>Style Gallery</h2>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/200" alt="Style 1">
-            <img src="https://via.placeholder.com/200" alt="Style 2">
-            <img src="https://via.placeholder.com/200" alt="Style 3">
-        </div>
-    </section>
+  <section id="gallery">
+    <h2>Style Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/200" alt="Style 1" />
+      <img src="https://via.placeholder.com/200" alt="Style 2" />
+      <img src="https://via.placeholder.com/200" alt="Style 3" />
+    </div>
+  </section>
 
-    <section id="booking">
-        <h2>Book an Appointment or Walk In</h2>
-        <p><strong>Appointments:</strong> Call or text <strong>(301) 541-9875</strong> to schedule in advance.</p>
-        <p>Or use our online scheduler: <a href="https://calendly.com/" target="_blank">Book on Calendly</a></p>
-        <p><strong>Walk-ins:</strong> Walk-ins are welcome based on availability. First come, first served.</p>
-        <p>Hours: Mon–Sat, 9am–6pm</p>
-    </section>
+  <section id="booking">
+    <h2>Book an Appointment or Walk In</h2>
+    <p><strong>Appointments:</strong> Call or text <strong>(301) 541-9875</strong> to schedule in advance.</p>
+    <p>Or use our online scheduler: <a href="https://calendly.com/" target="_blank">Book on Calendly</a></p>
+    <p><strong>Walk-ins:</strong> Welcome based on availability. First come, first served.</p>
+    <p>Hours: Mon–Sat, 9am–11pm</p>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: nforako24@gmail.com</p>
-        <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
-        <p>Address: Riverdale, MD</p>
-    </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:nforako24@gmail.com">nforako24@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/faith_styl" target="_blank">@faith_styl</a></p>
+    <p>Location: Riverdale, MD</p>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 fairh_hair_style. All Rights Reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 fairh_hair_style. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
