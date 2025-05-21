@@ -5,28 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>faith_hair_style</title>
   <style>
+    * { box-sizing: border-box; }
     body {
+      margin: 0; padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
+      background: #fff;
       color: #333;
     }
-
     header {
-      color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 40px 20px;
+      color: white;
     }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
+    header h1 { font-size: 2.5em; text-transform: uppercase; margin: 0; }
+    header p { font-size: 1.1em; margin: 10px 0; }
+    nav { margin-top: 10px; }
     nav a {
       margin: 0 12px;
       color: white;
@@ -34,104 +27,61 @@
       font-weight: bold;
       font-size: 1em;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     .cover {
       width: 100%;
       height: 300px;
       background: url('https://source.unsplash.com/1600x300/?hair,beauty,salon') center/cover no-repeat;
-      margin-bottom: 30px;
     }
-
     section {
-      padding: 50px 25px;
-      max-width: 960px;
-      margin: auto;
+      padding: 40px 25px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
       background: white;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-
     h2 {
       font-size: 1.8em;
       border-left: 5px solid;
       padding-left: 12px;
       margin-bottom: 20px;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      padding: 8px 0;
-      font-size: 1.1em;
-    }
-
+    ul { list-style: none; padding: 0; }
+    li { padding: 8px 0; font-size: 1.1em; }
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+      display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
     }
-
     .gallery img {
-      width: 220px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 220px; border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
+    .gallery img:hover { transform: scale(1.05); }
     a.button {
       display: inline-block;
       padding: 12px 25px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s ease;
       margin-top: 15px;
       color: white;
     }
-
     footer {
       color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 0.95em;
+      padding: 25px 20px;
     }
-
     .social-icons img {
-      width: 30px;
-      margin: 0 10px;
-      vertical-align: middle;
+      width: 30px; margin: 0 10px; vertical-align: middle;
     }
-
     @media (max-width: 640px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      .gallery {
-        flex-direction: column;
-        align-items: center;
-      }
+      nav a { display: block; margin: 10px 0; }
+      .gallery { flex-direction: column; align-items: center; }
     }
   </style>
   <style id="dynamic-style"></style>
 </head>
 <body>
-
   <header>
     <h1>faith_hair_style</h1>
     <p>Beauty. Confidence. You.</p>
@@ -164,12 +114,11 @@
   </section>
 
   <section id="booking">
-    <h2>Book an Appointment or Walk In</h2>
-    <p><strong>Appointments:</strong> Call or text <strong>(301) 541-9875</strong> to schedule in advance.</p>
-    <p>Or use our online scheduler:</p>
+    <h2>Book an Appointment</h2>
+    <p><strong>Call/text:</strong> (301) 541-9875</p>
+    <p>Or book online:</p>
     <a class="button" href="https://calendly.com/nforako24" target="_blank">Book on Calendly</a>
-    <p><strong>Walk-ins:</strong> Welcome based on availability. First come, first served.</p>
-    <p>Hours: Mon–Sat, 9am–11pm</p>
+    <p><strong>Walk-ins:</strong> Welcome. Mon–Sat, 9am–11pm</p>
   </section>
 
   <section id="contact">
@@ -200,10 +149,8 @@
       { header: "#fdd835", accent: "#f57f17", bg: "#fffde7", footer: "#fbc02d" },
       { header: "#9c27b0", accent: "#ab47bc", bg: "#f3e5f5", footer: "#8e24aa" }
     ];
-
     const styleTag = document.getElementById("dynamic-style");
     let themeIndex = new Date().getDay() % themes.length;
-
     function applyTheme(theme) {
       styleTag.innerHTML = `
         body { background: ${theme.bg}; }
@@ -215,9 +162,7 @@
         a.button:hover { background: ${theme.header}; }
       `;
     }
-
     applyTheme(themes[themeIndex]);
-
     setInterval(() => {
       themeIndex = (themeIndex + 1) % themes.length;
       applyTheme(themes[themeIndex]);
@@ -230,17 +175,12 @@
       "https://source.unsplash.com/300x300/?hairstyle",
       "https://source.unsplash.com/300x300/?salon"
     ];
-
     let imgIndex = 0;
     const firstImg = document.querySelector(".gallery img");
-
     setInterval(() => {
       imgIndex = (imgIndex + 1) % galleryImages.length;
-      if (firstImg) {
-        firstImg.src = galleryImages[imgIndex];
-      }
+      if (firstImg) firstImg.src = galleryImages[imgIndex];
     }, 15000);
   </script>
-
 </body>
 </html>
