@@ -14,10 +14,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 Measurement ID
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 
-  <!-- Facebook Pixel Code -->
+  <!-- Facebook Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
@@ -27,7 +27,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '123456789012345'); // Replace with your Pixel ID
+    fbq('init', '123456789012345');
     fbq('track', 'PageView');
   </script>
   <noscript>
@@ -36,7 +36,6 @@
   </noscript>
 
   <style>
-    /* [Styles unchanged] */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -103,12 +102,20 @@
       text-align: left;
     }
     .style-card h3 {
-      margin-bottom: 5px;
+      text-align: center;
       color: #c2185b;
+      margin-bottom: 10px;
     }
-    .style-card .price {
-      font-weight: bold;
+    .style-card ul {
+      list-style: none;
+      padding: 0;
       font-size: 1.1em;
+    }
+    .style-card li {
+      margin: 8px 0;
+    }
+    .price {
+      font-weight: bold;
       color: #FFD700;
     }
     .rotating-taglines {
@@ -178,19 +185,26 @@
   <section class="booking-section">
     <h2>Book Online Now</h2>
     <p>Experience premium braiding and hairstyling with professional care. Select your preferred date and time below:</p>
-    <div class="style-card"><h3>Twist Butt Length</h3><p><span class="price">$225</span></p></div>
-    <div class="style-card"><h3>Knotless Butt Length</h3><p><span class="price">$198</span></p></div>
-    <div class="style-card"><h3>Knotless Waist Length</h3><p><span class="price">$162</span></p></div>
-    <div class="style-card"><h3>Twist Waist Length</h3><p><span class="price">$180</span></p></div>
-    <div class="style-card"><h3>Boho Bob</h3><p><span class="price">$162</span></p></div>
-    <div class="style-card"><h3>Cornrows</h3><p><span class="price">$40+</span></p></div>
+    <div class="style-card">
+      <h3>SPECIAL BRAIDS <span style="color: #FFD700; font-size: 0.9em;">— 10% OFF!</span></h3>
+      <p style="text-align: center; color: #c2185b; font-weight: bold; margin-top: -10px;">
+        Limited time offer – Enjoy premium styles at special prices!
+      </p>
+      <ul>
+        <li><strong>Twist Butt Length</strong> — <span class="price">$225</span></li>
+        <li><strong>Knotless Butt Length</strong> — <span class="price">$198</span></li>
+        <li><strong>Knotless Waist Length</strong> — <span class="price">$162</span></li>
+        <li><strong>Twist Waist Length</strong> — <span class="price">$180</span></li>
+        <li><strong>Boho Bob</strong> — <span class="price">$162</span></li>
+      </ul>
+    </div>
     <iframe src="https://calendly.com/nforako24/30min" title="Online Booking Calendar"></iframe>
   </section>
   <footer>
     &copy; 2025 faith_hair_style | Designed for Confidence and Beauty | nforako24@gmail.com<br>
     Follow us: 
-    <a href="https://www.instagram.com/faith_styl" target="_blank" aria-label="Instagram Page" style="color:#FFD700; text-decoration:none;">Instagram</a> |
-    <a href="https://www.tiktok.com/@faith_hair_style" target="_blank" aria-label="TikTok Page" style="color:#FFD700; text-decoration:none;">TikTok</a>
+    <a href="https://www.instagram.com/faith_styl" target="_blank" style="color:#FFD700; text-decoration:none;">Instagram</a> |
+    <a href="https://www.tiktok.com/@faith_hair_style" target="_blank" style="color:#FFD700; text-decoration:none;">TikTok</a>
     <p style="margin-top: 10px; font-size: 1.05em; color: #FFD700;">
       Follow us on <a href="https://www.tiktok.com/@faith_hair_style" target="_blank" style="color:#fff; text-decoration:underline;">TikTok</a> and 
       <a href="https://www.instagram.com/faith_styl" target="_blank" style="color:#fff; text-decoration:underline;">Instagram</a> to explore more braid styles and find the perfect one for you!
@@ -201,8 +215,8 @@
   </footer>
   <div class="social-banner">
     Follow us for more styles:
-    <a href="https://www.instagram.com/faith_styl" target="_blank" aria-label="Instagram">Instagram</a> |
-    <a href="https://www.tiktok.com/@faith_hair_style" target="_blank" aria-label="TikTok">TikTok</a>
+    <a href="https://www.instagram.com/faith_styl" target="_blank">Instagram</a> |
+    <a href="https://www.tiktok.com/@faith_hair_style" target="_blank">TikTok</a>
   </div>
 <script>
   const messages = [
