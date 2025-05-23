@@ -139,12 +139,25 @@
     text-decoration: underline;
     margin: 0 10px;
   }
+  @keyframes backgroundShift {
+    0% { background: linear-gradient(to right, #fff8dc, #ffe4b5); }
+    50% { background: linear-gradient(to right, #ffe4b5, #fffdd0); }
+    100% { background: linear-gradient(to right, #fff8dc, #ffe4b5); }
+  }
+  body {
+    animation: backgroundShift 15s infinite ease-in-out;
+  }
+  .rotating-taglines {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #222;
+  }
 </style>
 </head>
 <body>
 <div class="background-gallery"></div>
   <header>
-    <div class="rotating-taglines">faith_hair_style – Book Your Signature Style</div>
+    <div class="rotating-taglines" id="rotatingText">faith_hair_style – Book Your Signature Style</div>
     <div class="subheader">Serving Riverdale, MD | Call/Text: 301-541-9875</div>
   </header>
   <section class="booking-section">
@@ -193,5 +206,21 @@
   <a href="https://www.instagram.com/faith_styl" target="_blank">Instagram</a> |
   <a href="https://www.tiktok.com/@faith_hair_style" target="_blank">TikTok</a>
 </div>
+<script>
+  const messages = [
+    'faith_hair_style – Book Your Signature Style',
+    'Your Look, Your Confidence, Your Style',
+    'Experience Modern Braids with a Touch of Elegance',
+    'Your Beauty is Our Passion – Book Today!',
+    'Luxury Braiding Services in Riverdale, MD',
+    'Trusted by Women and Men Who Value Quality',
+    'Because Every Style Deserves Excellence'
+  ];
+  let index = 0;
+  setInterval(() => {
+    document.getElementById('rotatingText').textContent = messages[index];
+    index = (index + 1) % messages.length;
+  }, 3000);
+</script>
 </body>
 </html>
