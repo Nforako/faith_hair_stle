@@ -1,5 +1,5 @@
-
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <link rel="icon" type="image/png" href="favicon.png" />
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -128,11 +128,12 @@
   }
   .floating-contact:hover {
     transform: scale(1.1);
-  }50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
-100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 215, 0, 0.5); }
-
-}
-
+  }
+  
+    50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+    100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 215, 0, 0.5); }
+  }
+  
 </style>
 </head>
 <body>
@@ -141,14 +142,18 @@
     <p style="font-size: 1em; margin: 8px 0;"><a href="https://maps.google.com/?q=Riverdale+MD" style="color:white; text-decoration:none;">Riverdale, MD</a> | <a href="tel:3015419875" style="color:white; text-decoration:none;">Call/Text: 301-541-9875</a></p>
     <p>Hairstyles for Women and Men | Personalized Recommendations</p>
     <div class="taglines" id="tagline">Confidence starts with great hair. Experience premium styles tailored just for you.</div>
-  </header>  <nav>
+  </header>
+
+  <nav>
     <a href="#">Home</a>
     <a href="#styles">Styles & Pricing</a>
     <a href="#booking">Book Online</a>
     <a href="#testimonials">Reviews</a>
     <a href="https://www.instagram.com/faith_styl" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@faith_styl" target="_blank">TikTok</a>
-  </nav>  <section id="styles" style="background: linear-gradient(to bottom right, #1b1b2f, #3a3a60); color: white; padding: 50px 20px; text-align: center;">
+  </nav>
+
+  <section id="styles" style="background: linear-gradient(to bottom right, #1b1b2f, #3a3a60); color: white; padding: 50px 20px; text-align: center;">
   <h2 style="color: #FFD700; margin-bottom: 30px;">Special Braids Offer – 10% Off!</h2>
   <div class="style-card">
   <h3>Twist Butt Length</h3>
@@ -178,25 +183,44 @@
     <h3>Cornrows</h3>
     <p><span class="price">$40+</span></p>
   </div>
-</section>  <section>
+</section>
+
+  <section>
     <h2>Get a Style Idea</h2>
     <input type="text" id="prompt" placeholder="Describe your hair or style goal...">
     <button onclick="generateSuggestion()">Show Style</button>
     <div class="response" id="response"></div>
     <img id="hairstyleImage" src="https://source.unsplash.com/800x400/?hairstyle,braids" alt="Hairstyle" />
-  </section>  <section id="booking" style="background: linear-gradient(to right, #fff8dc, #ffe4b5); padding: 60px 20px; text-align: center;">
+  </section>
+
+  <section id="booking" style="background: linear-gradient(to right, #fff8dc, #ffe4b5); padding: 60px 20px; text-align: center;">
   <h2 style="color: #b76e79; font-size: 2em; margin-bottom: 10px;">Book Online Now</h2>
   <p style="font-size: 1.1em; color: #5c5c5c; margin-bottom: 30px;">Reserve your braiding appointment in just a few clicks.</p>
   <iframe src="https://calendly.com/nforako24/30min" width="100%" height="600" frameborder="0" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
-</section>$1 <p><strong>Location:</strong> Riverdale, MD</p> <p>Call or Text: <strong>301-541-9875</strong></p> <form action="mailto:nforako24@gmail.com" method="POST" enctype="text/plain"> <input type="text" name="name" placeholder="Your name" required> <input type="email" name="email" placeholder="Your email" required> <textarea name="message" placeholder="Your message" required></textarea> <button type="submit">Send</button> </form>
+</section>
 
-  </section>  <section id="testimonials">
+  $1
+    <p><strong>Location:</strong> Riverdale, MD</p>
+    <p>Call or Text: <strong>301-541-9875</strong></p>
+    <form action="mailto:nforako24@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="testimonials">
     <h2>What Our Clients Say</h2>
     <blockquote>“Amazing service! My hair looks perfect every time.” – Sarah A.</blockquote>
     <blockquote>“Very professional and friendly. Highly recommend!” – James T.</blockquote>
-  </section>  <footer>
+  </section>
+
+  <footer>
     &copy; 2025 faith_hair_style | All rights reserved | Contact: 301-541-9875
-  </footer>  <script>
+  </footer>
+
+  <script>
     const colors = ['#FFD700', '#FFF5CC', '#FFEFBA', '#FFE4B5', '#FAFAD2', '#FBE7A1', '#FFFACD', '#FFFAF0', '#FFF8DC', '#FFFDD0'];
     let colorIndex = 0;
     setInterval(() => {
@@ -275,8 +299,8 @@ lightbox.addEventListener('click', () => {
     btn.addEventListener('click', () => clickSound.play());
   });
   
-</script><a href="#contact" class="floating-contact">Contact Us</a>
-
+</script>
+<a href="#contact" class="floating-contact">Contact Us</a>
 <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999;">
   <span id="prev-btn" style="position:absolute; left:20px; font-size:3em; color:white; cursor:pointer; user-select:none;">&#10094;</span>
   <img id="lightbox-img" src="" style="max-width:90%; max-height:80%; border-radius:10px; box-shadow:0 0 20px gold;">
