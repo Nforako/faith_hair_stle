@@ -1,4 +1,3 @@
-<!-- FULL CODE BLOCK START -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,28 +39,31 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #ffffff, #e6e6ff);
-      color: #222;
+      color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      transition: background 1s ease-in-out;
+    }
+
+    header, footer, .social-banner {
+      transition: background 1s ease-in-out;
     }
 
     header {
-      background: linear-gradient(to right, #0033cc, #001a66);
       color: white;
       padding: 30px 20px;
       text-align: center;
       font-size: 1.5em;
       font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
     }
 
     .subheader {
       font-size: 1em;
       font-weight: normal;
-      color: #ccd;
+      color: #ffe6ec;
       margin-top: 8px;
     }
 
@@ -73,13 +75,13 @@
 
     .booking-section h2 {
       font-size: 2em;
-      color: #0033cc;
+      color: #7c0a02;
       margin-bottom: 10px;
     }
 
     .booking-section p {
       font-size: 1.1em;
-      color: #444;
+      color: #555;
       margin-bottom: 30px;
     }
 
@@ -93,7 +95,7 @@
     }
 
     .style-card {
-      background: #f9f9ff;
+      background: #fff0f5;
       margin: 20px auto;
       padding: 20px;
       max-width: 600px;
@@ -104,7 +106,7 @@
 
     .style-card h3 {
       text-align: center;
-      color: #0033cc;
+      color: #e91e63;
       margin-bottom: 10px;
     }
 
@@ -120,7 +122,7 @@
 
     .price {
       font-weight: bold;
-      color: red;
+      color: #FFD700;
     }
 
     .rotating-taglines {
@@ -138,7 +140,6 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background: linear-gradient(to right, #0033cc, #001a66);
       color: white;
       text-align: center;
       padding: 12px 10px;
@@ -154,7 +155,6 @@
     }
 
     footer {
-      background: #001a66;
       color: white;
       text-align: center;
       padding: 20px 10px;
@@ -198,7 +198,7 @@
 
     <div class="style-card">
       <h3>SPECIAL BRAIDS <span style="color: #FFD700; font-size: 0.9em;">— 10% OFF!</span></h3>
-      <p style="text-align: center; color: #0033cc; font-weight: bold; margin-top: -10px;">
+      <p style="text-align: center; color: #7c0a02; font-weight: bold; margin-top: -10px;">
         Limited time offer – Enjoy premium styles at special prices!
       </p>
       <ul>
@@ -248,7 +248,33 @@
       document.getElementById('rotatingText').textContent = messages[index];
       index = (index + 1) % messages.length;
     }, 3000);
+
+    function applyTimeTheme() {
+      const hour = new Date().getHours();
+      let bodyBg = '';
+      let headerBg = '';
+
+      if (hour >= 6 && hour < 12) {
+        bodyBg = 'linear-gradient(to right, #fff7e6, #ffe5b4)';
+        headerBg = 'linear-gradient(to right, #ffb347, #ffcc33)';
+      } else if (hour >= 12 && hour < 17) {
+        bodyBg = 'linear-gradient(to right, #fff0f5, #ffd6e8)';
+        headerBg = 'linear-gradient(to right, #ff69b4, #ff85a2)';
+      } else if (hour >= 17 && hour < 20) {
+        bodyBg = 'linear-gradient(to right, #fffafc, #ffeef2)';
+        headerBg = 'linear-gradient(to right, #b76e79, #ffafbd)';
+      } else {
+        bodyBg = 'linear-gradient(to right, #1c1c2b, #3a3a52)';
+        headerBg = 'linear-gradient(to right, #3b3b98, #2e2e4d)';
+      }
+
+      document.body.style.background = bodyBg;
+      document.querySelector('header').style.background = headerBg;
+      document.querySelector('footer').style.background = headerBg;
+      document.querySelector('.social-banner').style.background = headerBg;
+    }
+
+    applyTimeTheme();
   </script>
 </body>
 </html>
-<!-- FULL CODE BLOCK END -->
